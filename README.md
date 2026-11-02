@@ -27,4 +27,3 @@ Yukarıdaki **Download Node Connector for Windows** bağlantısından kurulum pa
 Maintained by **zaffzuff** · [zaftech.contact@gmail.com](mailto:zaftech.contact@gmail.com)
 
 ZAF Tech is a community project. It is not an official Pi Core Team product.
-ZAF Tech — project information and official Node Connector downloads. Free, independent Pi ecosystem observatory.
