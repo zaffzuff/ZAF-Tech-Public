@@ -6,11 +6,11 @@
 
 **[Open ZAF Tech](https://zaf-tech.vercel.app)** · **[Download Node Connector for Windows](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest)**
 
-## Node Connector
+## ZT Pi Node Connector v1.9.7
 
 The Windows x64 companion lets ZAF Tech read diagnostics from your own local Pi Node. It listens on `127.0.0.1:39100`, checks the requesting browser origin and host, and provides read-only Docker/Node information.
 
-- [Download the latest installer](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest/download/ZAF-TECH-Node-Connector-Setup.exe)
+- [Download the latest installer](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest/download/ZT-Pi-Node-Connector-v1.9.7-Setup.exe)
 - [Download the SHA-256 checksum](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest/download/ZAF-TECH-Node-Connector-SHA256SUMS.txt)
 - [Installation and privacy](CONNECTOR.md)
 

@@ -1,8 +1,8 @@
-# ZAF Tech Node Connector for Windows
+# ZT Pi Node Connector v1.9.7 for Windows
 
 ## Install
 
-1. Download `ZAF-TECH-Node-Connector-Setup.exe` from [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest).
+1. Download `ZT-Pi-Node-Connector-v1.9.7-Setup.exe` from [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest).
 2. Run the installer on your Windows x64 computer. Review the optional Windows-startup and launch selections.
 3. With your own Pi Node/Docker installation running, open [ZAF Tech](https://zaf-tech.vercel.app) and select **Network → Node**.
 
@@ -13,7 +13,7 @@ The installer includes the tray application and its worker. It is not code-signe
 Download `ZAF-TECH-Node-Connector-SHA256SUMS.txt` from the same release. In PowerShell, run:
 
 ```powershell
-Get-FileHash .\ZAF-TECH-Node-Connector-Setup.exe -Algorithm SHA256
+Get-FileHash .\ZT-Pi-Node-Connector-v1.9.7-Setup.exe -Algorithm SHA256
 ```
 
 Compare the hash with the installer entry in the checksum file. A matching hash verifies file integrity; it is not a substitute for a code-signing certificate.
@@ -36,3 +36,12 @@ Compare the hash with the installer entry in the checksum file. A matching hash 
 Paket kod imzalı değildir; Windows bilinmeyen yayıncı bildirimi gösterebilir. Kurmadan önce dosyanın bu repodan geldiğini ve SHA-256 değerinin aynı sürümün doğrulama dosyasıyla eşleştiğini kontrol edin.
 
 Connector yalnızca yerel teşhis verilerini okur. Pi Node ayarlarınızı değiştirmez. Cüzdan kurtarma kelimelerinizi, parolanızı veya özel anahtarınızı hiçbir zaman istemez.
+
+## New in v1.9.7
+
+- Real country boundaries and local country-level connection summaries in ZAF Tech. Incoming Windows TCP observations and authenticated Core peers retain separate source labels. Raw peer addresses are not sent to a geolocation service.
+- Country lookup uses the bundled DB-IP Country Lite November 2026 database, licensed CC BY 4.0: https://db-ip.com/db/download/ip-to-country-lite. Country locations are approximate.
+- On explicit request only, the local worker reads the Node UUID used by Pi Desktop from its own query log (registry fallback) and sends that identifier only to Pi’s sync.minepi.com service to retrieve the published availability record, up to 90 days. Logs and the identifier are not uploaded to ZAF Tech.
+- Existing installation identity, local history and startup preference are preserved.
+
+The personal bonus journal is a separate ZAF Tech feature requiring a verified Pi session; entries are manual and private to that app-scoped identity.
