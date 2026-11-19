@@ -6,11 +6,11 @@
 
 **[Open ZAF Tech](https://zaf-tech.vercel.app)** · **[Download Node Agent for Windows](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest)**
 
-## ZAF Tech Node Agent v1.9.8
+## ZAF Tech Node Agent v1.9.9
 
 The Windows x64 companion lets ZAF Tech read diagnostics from your own local Pi Node. It listens on `127.0.0.1:39100`, checks the requesting browser origin and host, and provides read-only Docker/Node information.
 
-- [Download the latest installer](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest/download/ZAF-Tech-Node-Agent-v1.9.8-Setup.exe)
+- [Download the latest installer](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest/download/ZAF-Tech-Node-Agent-v1.9.9-Setup.exe)
 - [Download the SHA-256 checksum](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest/download/ZAF-TECH-Node-Connector-SHA256SUMS.txt)
 - [Installation and privacy](CONNECTOR.md)
 

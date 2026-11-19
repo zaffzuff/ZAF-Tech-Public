@@ -1,8 +1,8 @@
-# ZAF Tech Node Agent v1.9.8 for Windows
+# ZAF Tech Node Agent v1.9.9 for Windows
 
 ## Install
 
-1. Download `ZAF-Tech-Node-Agent-v1.9.8-Setup.exe` from [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest).
+1. Download `ZAF-Tech-Node-Agent-v1.9.9-Setup.exe` from [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest).
 2. Run the installer on your Windows x64 computer. Review the optional Windows-startup and launch selections.
 3. With your own Pi Node/Docker installation running, open [ZAF Tech](https://zaf-tech.vercel.app) and select **Network → Node**.
 
@@ -13,7 +13,7 @@ The installer includes the tray application and its worker. It is not code-signe
 Download `ZAF-TECH-Node-Connector-SHA256SUMS.txt` from the same release. In PowerShell, run:
 
 ```powershell
-Get-FileHash .\ZAF-Tech-Node-Agent-v1.9.8-Setup.exe -Algorithm SHA256
+Get-FileHash .\ZAF-Tech-Node-Agent-v1.9.9-Setup.exe -Algorithm SHA256
 ```
 
 Compare the hash with the installer entry in the checksum file. A matching hash verifies file integrity; it is not a substitute for a code-signing certificate.
@@ -46,10 +46,14 @@ Agent yalnızca yerel teşhis verilerini okur. Pi Node ayarlarınızı değişti
 
 The personal bonus journal is a separate ZAF Tech feature requiring a verified Pi session; entries are manual and private to that app-scoped identity.
 
-## Shared Windows Agent / Ortak Windows Agent (v1.9.8)
+## Shared Windows Agent / Ortak Windows Agent (v1.9.9)
 
 **Windows: ZAF Tech Node Agent. SoloHost: ZAF Tech Node Connector.** One Windows installation supplies local read-only data to both applications. SoloHost integration is being developed separately; the Windows rename does not by itself enable its dashboard.
 
 Bu sürüm mevcut kurulumun üzerine yükselir. Kurulum kimliği, Node geçmişi, yerel API adresi ve dahili çalıştırılabilir dosya adları uyumluluk için korunur. Önceki başlangıç girdileri ve menü kısayolları yenilenir; ikinci bir Agent kurulmaz. Pi Node ve Docker yapılandırması değiştirilmez.
 
 Legacy executable names and the API identifier `zaf-node-connector` remain intentional compatibility identifiers. Old releases remain available for rollback.
+
+## Docker system inventory (v1.9.9)
+
+The fixed read-only /system endpoint reports Docker versions, system capacity and container inventory. Environment values, mounts, command lines, host paths and raw container IDs are excluded. This supports the Docker panel of the separate SoloHost app. Existing ZAF Tech clients remain compatible.
