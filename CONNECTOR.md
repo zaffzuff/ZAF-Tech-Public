@@ -1,8 +1,8 @@
-# ZT Pi Node Connector v1.9.7 for Windows
+# ZAF Tech Node Agent v1.9.8 for Windows
 
 ## Install
 
-1. Download `ZT-Pi-Node-Connector-v1.9.7-Setup.exe` from [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest).
+1. Download `ZAF-Tech-Node-Agent-v1.9.8-Setup.exe` from [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest).
 2. Run the installer on your Windows x64 computer. Review the optional Windows-startup and launch selections.
 3. With your own Pi Node/Docker installation running, open [ZAF Tech](https://zaf-tech.vercel.app) and select **Network → Node**.
 
@@ -13,7 +13,7 @@ The installer includes the tray application and its worker. It is not code-signe
 Download `ZAF-TECH-Node-Connector-SHA256SUMS.txt` from the same release. In PowerShell, run:
 
 ```powershell
-Get-FileHash .\ZT-Pi-Node-Connector-v1.9.7-Setup.exe -Algorithm SHA256
+Get-FileHash .\ZAF-Tech-Node-Agent-v1.9.8-Setup.exe -Algorithm SHA256
 ```
 
 Compare the hash with the installer entry in the checksum file. A matching hash verifies file integrity; it is not a substitute for a code-signing certificate.
@@ -23,19 +23,19 @@ Compare the hash with the installer entry in the checksum file. A matching hash 
 - The worker binds only to `127.0.0.1:39100`.
 - Production browser access is limited to `https://zaf-tech.vercel.app` by default, with local development origins also allowed. Foreign origins and invalid Host headers are rejected before diagnostics.
 - It reads Docker/WSL and Pi Node status and keeps a local diagnostic history. It does not upload that history to a central server by itself.
-- It does not start, stop or reconfigure your Pi Node. Tray controls start or stop the Connector itself.
+- It does not start, stop or reconfigure your Pi Node. Tray controls start or stop the Agent itself.
 - It never requests Pi wallet credentials or recovery words, signs transactions, or takes payments.
 - Node protocols 27 and 28 are recognized. Other protocols are reported as unknown compatibility.
 
 ## Türkçe kurulum
 
 1. [Releases](https://github.com/zaffzuff/ZAF-Tech-Public/releases/latest) sayfasından **Setup.exe** dosyasını indirin.
-2. Windows x64 bilgisayarınızda kurulum seçeneklerini inceleyerek yükleyin. Kurulum, Connector ve yardımcı worker dosyalarını birlikte kurar.
+2. Windows x64 bilgisayarınızda kurulum seçeneklerini inceleyerek yükleyin. Kurulum, Agent ve yardımcı worker dosyalarını birlikte kurar.
 3. Pi Node/Docker çalışırken [ZAF Tech](https://zaf-tech.vercel.app) içerisinde **Network → Node** bölümünü açın.
 
 Paket kod imzalı değildir; Windows bilinmeyen yayıncı bildirimi gösterebilir. Kurmadan önce dosyanın bu repodan geldiğini ve SHA-256 değerinin aynı sürümün doğrulama dosyasıyla eşleştiğini kontrol edin.
 
-Connector yalnızca yerel teşhis verilerini okur. Pi Node ayarlarınızı değiştirmez. Cüzdan kurtarma kelimelerinizi, parolanızı veya özel anahtarınızı hiçbir zaman istemez.
+Agent yalnızca yerel teşhis verilerini okur. Pi Node ayarlarınızı değiştirmez. Cüzdan kurtarma kelimelerinizi, parolanızı veya özel anahtarınızı hiçbir zaman istemez.
 
 ## New in v1.9.7
 
@@ -45,3 +45,11 @@ Connector yalnızca yerel teşhis verilerini okur. Pi Node ayarlarınızı deği
 - Existing installation identity, local history and startup preference are preserved.
 
 The personal bonus journal is a separate ZAF Tech feature requiring a verified Pi session; entries are manual and private to that app-scoped identity.
+
+## Shared Windows Agent / Ortak Windows Agent (v1.9.8)
+
+**Windows: ZAF Tech Node Agent. SoloHost: ZAF Tech Node Connector.** One Windows installation supplies local read-only data to both applications. SoloHost integration is being developed separately; the Windows rename does not by itself enable its dashboard.
+
+Bu sürüm mevcut kurulumun üzerine yükselir. Kurulum kimliği, Node geçmişi, yerel API adresi ve dahili çalıştırılabilir dosya adları uyumluluk için korunur. Önceki başlangıç girdileri ve menü kısayolları yenilenir; ikinci bir Agent kurulmaz. Pi Node ve Docker yapılandırması değiştirilmez.
+
+Legacy executable names and the API identifier `zaf-node-connector` remain intentional compatibility identifiers. Old releases remain available for rollback.
